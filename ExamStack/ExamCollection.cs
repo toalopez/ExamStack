@@ -42,7 +42,7 @@ namespace ExamStack
             return InnerList.IndexOf(name);
         }
 
-        public void RemoveAt(int Indice)
+        public new void RemoveAt(int Indice)
         {
             InnerList.RemoveAt(Indice);
         }
