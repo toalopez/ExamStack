@@ -33,11 +33,23 @@
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.txtName = new Telerik.WinControls.UI.RadTextBoxControl();
             this.txtExamNum = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.lstExams = new Telerik.WinControls.UI.RadListControl();
+            this.lblExamList = new Telerik.WinControls.UI.RadLabel();
+            this.btnTurnIn = new Telerik.WinControls.UI.RadButton();
+            this.btnView = new Telerik.WinControls.UI.RadButton();
+            this.btnReturn = new Telerik.WinControls.UI.RadButton();
+            this.btnExit = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstExams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblExamList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -78,11 +90,65 @@
             this.txtExamNum.Size = new System.Drawing.Size(54, 27);
             this.txtExamNum.TabIndex = 4;
             // 
+            // lstExams
+            // 
+            this.lstExams.Location = new System.Drawing.Point(25, 98);
+            this.lstExams.Name = "lstExams";
+            this.lstExams.Size = new System.Drawing.Size(594, 227);
+            this.lstExams.TabIndex = 5;
+            this.lstExams.Text = "radListControl1";
+            // 
+            // lblExamList
+            // 
+            this.lblExamList.Location = new System.Drawing.Point(25, 74);
+            this.lblExamList.Name = "lblExamList";
+            this.lblExamList.Size = new System.Drawing.Size(64, 18);
+            this.lblExamList.TabIndex = 6;
+            this.lblExamList.Text = "Exam List  : ";
+            // 
+            // btnTurnIn
+            // 
+            this.btnTurnIn.Location = new System.Drawing.Point(29, 347);
+            this.btnTurnIn.Name = "btnTurnIn";
+            this.btnTurnIn.Size = new System.Drawing.Size(87, 32);
+            this.btnTurnIn.TabIndex = 7;
+            this.btnTurnIn.Text = "Turn In";
+            // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(140, 347);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(87, 32);
+            this.btnView.TabIndex = 8;
+            this.btnView.Text = "View";
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(252, 347);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(87, 32);
+            this.btnReturn.TabIndex = 9;
+            this.btnReturn.Text = "Return";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(356, 347);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(87, 32);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Exit";
+            // 
             // MainExams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 528);
+            this.ClientSize = new System.Drawing.Size(643, 405);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.btnTurnIn);
+            this.Controls.Add(this.lblExamList);
+            this.Controls.Add(this.lstExams);
             this.Controls.Add(this.txtExamNum);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.radSeparator1);
@@ -95,6 +161,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstExams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblExamList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +179,12 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadTextBoxControl txtName;
         private Telerik.WinControls.UI.RadTextBoxControl txtExamNum;
+        private Telerik.WinControls.UI.RadListControl lstExams;
+        private Telerik.WinControls.UI.RadLabel lblExamList;
+        private Telerik.WinControls.UI.RadButton btnTurnIn;
+        private Telerik.WinControls.UI.RadButton btnView;
+        private Telerik.WinControls.UI.RadButton btnReturn;
+        private Telerik.WinControls.UI.RadButton btnExit;
     }
 }
 
