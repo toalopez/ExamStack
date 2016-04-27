@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblName = new Telerik.WinControls.UI.RadLabel();
             this.lblExamNum = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
@@ -38,7 +39,8 @@
             this.btnTurnIn = new Telerik.WinControls.UI.RadButton();
             this.btnView = new Telerik.WinControls.UI.RadButton();
             this.btnReturn = new Telerik.WinControls.UI.RadButton();
-            this.btnExit = new Telerik.WinControls.UI.RadButton();
+            this.btnFinish = new Telerik.WinControls.UI.RadButton();
+            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
@@ -49,7 +51,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -92,11 +95,17 @@
             // 
             // lstExams
             // 
+            this.lstExams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstExams.DataSource = this.testBindingSource;
+            this.lstExams.DisplayMember = "Name";
             this.lstExams.Location = new System.Drawing.Point(25, 98);
             this.lstExams.Name = "lstExams";
             this.lstExams.Size = new System.Drawing.Size(594, 227);
             this.lstExams.TabIndex = 5;
             this.lstExams.Text = "radListControl1";
+            this.lstExams.ValueMember = "Numero";
             // 
             // lblExamList
             // 
@@ -113,6 +122,7 @@
             this.btnTurnIn.Size = new System.Drawing.Size(87, 32);
             this.btnTurnIn.TabIndex = 7;
             this.btnTurnIn.Text = "Turn In";
+            this.btnTurnIn.Click += new System.EventHandler(this.btnTurnIn_Click);
             // 
             // btnView
             // 
@@ -130,20 +140,25 @@
             this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "Return";
             // 
-            // btnExit
+            // btnFinish
             // 
-            this.btnExit.Location = new System.Drawing.Point(356, 347);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(87, 32);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
+            this.btnFinish.Location = new System.Drawing.Point(356, 347);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(87, 32);
+            this.btnFinish.TabIndex = 10;
+            this.btnFinish.Text = "Finish";
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
+            // testBindingSource
+            // 
+            this.testBindingSource.DataSource = typeof(ExamStack.Test);
             // 
             // MainExams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 405);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnTurnIn);
@@ -156,6 +171,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "MainExams";
             this.Text = "Exam Stack";
+            this.Load += new System.EventHandler(this.MainExams_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
@@ -166,7 +182,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,7 +201,8 @@
         private Telerik.WinControls.UI.RadButton btnTurnIn;
         private Telerik.WinControls.UI.RadButton btnView;
         private Telerik.WinControls.UI.RadButton btnReturn;
-        private Telerik.WinControls.UI.RadButton btnExit;
+        private Telerik.WinControls.UI.RadButton btnFinish;
+        private System.Windows.Forms.BindingSource testBindingSource;
     }
 }
 
