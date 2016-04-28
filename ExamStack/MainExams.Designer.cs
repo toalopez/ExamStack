@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.lblName = new Telerik.WinControls.UI.RadLabel();
             this.lblExamNum = new Telerik.WinControls.UI.RadLabel();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.txtName = new Telerik.WinControls.UI.RadTextBoxControl();
             this.txtExamNum = new Telerik.WinControls.UI.RadTextBoxControl();
             this.lstExams = new Telerik.WinControls.UI.RadListControl();
@@ -40,10 +39,12 @@
             this.btnView = new Telerik.WinControls.UI.RadButton();
             this.btnReturn = new Telerik.WinControls.UI.RadButton();
             this.btnFinish = new Telerik.WinControls.UI.RadButton();
+            this.breezeTheme1 = new Telerik.WinControls.Themes.BreezeTheme();
+            this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
+            this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstExams)).BeginInit();
@@ -57,59 +58,54 @@
             // 
             // lblName
             // 
-            this.lblName.Location = new System.Drawing.Point(25, 22);
+            this.lblName.Location = new System.Drawing.Point(21, 403);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 18);
+            this.lblName.Size = new System.Drawing.Size(52, 17);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name : ";
+            this.lblName.ThemeName = "Aqua";
             // 
             // lblExamNum
             // 
-            this.lblExamNum.Location = new System.Drawing.Point(413, 22);
+            this.lblExamNum.Location = new System.Drawing.Point(304, 403);
             this.lblExamNum.Name = "lblExamNum";
-            this.lblExamNum.Size = new System.Drawing.Size(86, 18);
+            this.lblExamNum.Size = new System.Drawing.Size(100, 17);
             this.lblExamNum.TabIndex = 1;
             this.lblExamNum.Text = "Exam Number : ";
-            // 
-            // radSeparator1
-            // 
-            this.radSeparator1.Location = new System.Drawing.Point(12, 46);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(619, 22);
-            this.radSeparator1.TabIndex = 2;
-            this.radSeparator1.Text = "radSeparator1";
+            this.lblExamNum.ThemeName = "Aqua";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(77, 19);
+            this.txtName.Location = new System.Drawing.Point(73, 400);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(291, 27);
+            this.txtName.Size = new System.Drawing.Size(209, 27);
             this.txtName.TabIndex = 3;
+            this.txtName.ThemeName = "Breeze";
+            this.txtName.WordWrap = false;
             // 
             // txtExamNum
             // 
-            this.txtExamNum.Location = new System.Drawing.Point(505, 19);
+            this.txtExamNum.Location = new System.Drawing.Point(410, 400);
             this.txtExamNum.Name = "txtExamNum";
             this.txtExamNum.Size = new System.Drawing.Size(54, 27);
             this.txtExamNum.TabIndex = 4;
+            this.txtExamNum.ThemeName = "Breeze";
             // 
             // lstExams
             // 
-            this.lstExams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstExams.DataSource = this.testBindingSource;
             this.lstExams.DisplayMember = "Name";
-            this.lstExams.Location = new System.Drawing.Point(25, 98);
+            this.lstExams.Location = new System.Drawing.Point(25, 36);
             this.lstExams.Name = "lstExams";
-            this.lstExams.Size = new System.Drawing.Size(594, 227);
+            this.lstExams.Size = new System.Drawing.Size(439, 337);
             this.lstExams.TabIndex = 5;
             this.lstExams.Text = "radListControl1";
+            this.lstExams.ThemeName = "Aqua";
             this.lstExams.ValueMember = "Numero";
             // 
             // lblExamList
             // 
-            this.lblExamList.Location = new System.Drawing.Point(25, 74);
+            this.lblExamList.Location = new System.Drawing.Point(25, 12);
             this.lblExamList.Name = "lblExamList";
             this.lblExamList.Size = new System.Drawing.Size(64, 18);
             this.lblExamList.TabIndex = 6;
@@ -117,36 +113,42 @@
             // 
             // btnTurnIn
             // 
-            this.btnTurnIn.Location = new System.Drawing.Point(29, 347);
+            this.btnTurnIn.Location = new System.Drawing.Point(24, 453);
             this.btnTurnIn.Name = "btnTurnIn";
             this.btnTurnIn.Size = new System.Drawing.Size(87, 32);
             this.btnTurnIn.TabIndex = 7;
             this.btnTurnIn.Text = "Turn In";
+            this.btnTurnIn.ThemeName = "Breeze";
             this.btnTurnIn.Click += new System.EventHandler(this.btnTurnIn_Click);
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(140, 347);
+            this.btnView.Location = new System.Drawing.Point(130, 453);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(87, 32);
             this.btnView.TabIndex = 8;
             this.btnView.Text = "View";
+            this.btnView.ThemeName = "Breeze";
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(252, 347);
+            this.btnReturn.Location = new System.Drawing.Point(240, 453);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(87, 32);
             this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "Return";
+            this.btnReturn.ThemeName = "Breeze";
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(356, 347);
+            this.btnFinish.Location = new System.Drawing.Point(346, 453);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(87, 32);
             this.btnFinish.TabIndex = 10;
             this.btnFinish.Text = "Finish";
+            this.btnFinish.ThemeName = "Breeze";
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // testBindingSource
@@ -157,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 405);
+            this.ClientSize = new System.Drawing.Size(490, 518);
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnView);
@@ -166,7 +168,6 @@
             this.Controls.Add(this.lstExams);
             this.Controls.Add(this.txtExamNum);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.radSeparator1);
             this.Controls.Add(this.lblExamNum);
             this.Controls.Add(this.lblName);
             this.Name = "MainExams";
@@ -174,7 +175,6 @@
             this.Load += new System.EventHandler(this.MainExams_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstExams)).EndInit();
@@ -193,7 +193,6 @@
 
         private Telerik.WinControls.UI.RadLabel lblName;
         private Telerik.WinControls.UI.RadLabel lblExamNum;
-        private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadTextBoxControl txtName;
         private Telerik.WinControls.UI.RadTextBoxControl txtExamNum;
         private Telerik.WinControls.UI.RadListControl lstExams;
@@ -203,6 +202,9 @@
         private Telerik.WinControls.UI.RadButton btnReturn;
         private Telerik.WinControls.UI.RadButton btnFinish;
         private System.Windows.Forms.BindingSource testBindingSource;
+        private Telerik.WinControls.Themes.BreezeTheme breezeTheme1;
+        private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
+        private Telerik.WinControls.RadThemeManager radThemeManager1;
     }
 }
 
