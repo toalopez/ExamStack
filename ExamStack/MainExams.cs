@@ -94,7 +94,6 @@ namespace ExamStack
                 if (Examen.Name == fullName)
                 {
                     submittedTests.Add(Examen);
-                    txtExamNum.Text = Examen.Numero.ToString();
                     found = true;
                     break;
                 }
@@ -104,6 +103,8 @@ namespace ExamStack
             if (found == true)
             {
                 outForChecking.RemoveAt(pos);
+                MessageBox.Show("Exam has been returned");
+)
             }
         }
     }
