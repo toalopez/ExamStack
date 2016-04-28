@@ -44,67 +44,107 @@ namespace ExamStack
 
             txtName.Text = "";
             txtExamNum.Text = "";
+
+            txtName.Select();
             
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-            // testBindingSource.DataSource = submittedTests;
-            // lstExams.DataSource = testBindingSource;
+
+            foreach (var prueba in outForChecking)
+            {
+                Test Examen = (Test)prueba;
+                submittedTests.Add(Examen);
+                RadListDataItem Item = this.lstReturnExams.SelectedItem as RadListDataItem;
+                if (Item != null)
+                {
+                   lstExams.Items.Add(Item);
+                }
+                
+
+            }
+
+            outForChecking.Clear();
+            this.lstReturnExams.Items.Clear();
+
+            txtName.Text = "";
+            txtExamNum.Text = "";
+
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
-              string fullName = txtName.Text;
               int pos = -1;
               bool found = false;
+              RadListDataItem Item = this.lstExams.SelectedItem as RadListDataItem;
 
-            foreach(var prueba in submittedTests)
-            {
-                pos += 1;
+              if (Item != null)
+              {
+                  string fullName = Item.Text;
 
-                Test Examen = (Test)prueba;
-                if ( Examen.Name == fullName)
-                {
-                    outForChecking.Add(Examen);
-                    txtExamNum.Text = Examen.Numero.ToString();
-                    found = true;
-                    break;
-                }
-                               
-            }
+                  foreach (var prueba in submittedTests)
+                  {
+                      pos += 1;
 
-            if (found == true)
-            {
-                submittedTests.RemoveAt(pos);
-            }
+                      Test Examen = (Test)prueba;
+                      if (Examen.Name == fullName)
+                      {
+                          outForChecking.Add(Examen);
+                          txtName.Text = Examen.Name;
+                          txtExamNum.Text = Examen.Numero.ToString();
+                          found = true;
+                          break;
+                      }
+
+                  }
+
+                  if (found == true)
+                  {
+                      submittedTests.RemoveAt(pos);
+                      if (this.lstExams.Items.Remove(Item) == true)
+                      {
+                          lstReturnExams.Items.Add(Item);
+                      }
+                  }
+              }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            string fullName = txtName.Text;
             int pos = -1;
             bool found = false;
+            RadListDataItem Item = this.lstReturnExams.SelectedItem as RadListDataItem;
 
-            foreach (var prueba in outForChecking)
+            if (Item != null)
             {
-                pos += 1;
+                string fullName = Item.Text;
 
-                Test Examen = (Test)prueba;
-                if (Examen.Name == fullName)
+                foreach (var prueba in outForChecking)
                 {
-                    submittedTests.Add(Examen);
-                    found = true;
-                    break;
+                    pos += 1;
+
+                    Test Examen = (Test)prueba;
+                    if (Examen.Name == fullName)
+                    {
+                        submittedTests.Add(Examen);
+                        txtName.Text = "";
+                        txtExamNum.Text = "";
+                        found = true;
+                        break;
+                    }
+
                 }
 
-            }
-
-            if (found == true)
-            {
-                outForChecking.RemoveAt(pos);
-                MessageBox.Show("Exam has been returned");
-)
+                if (found == true)
+                {
+                    outForChecking.RemoveAt(pos);
+                    if (this.lstReturnExams.Items.Remove(Item) == true)
+                    {
+                        lstExams.Items.Add(Item);
+                    }
+                    MessageBox.Show("Thank you " + fullName, "Exam has been returned", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
