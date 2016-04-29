@@ -12,8 +12,8 @@ namespace ExamStack
 {
     public partial class MainExams : Form
     {
-        ExamCollection submittedTests = null;
-        ExamCollection outForChecking = null;
+        List<Test> submittedTests = null;
+        List<Test> outForChecking = null;
 
         public MainExams()
         {
@@ -23,8 +23,8 @@ namespace ExamStack
 
         private void MainExams_Load(object sender, EventArgs e)
         {
-            submittedTests = new ExamCollection();
-            outForChecking = new ExamCollection();
+            submittedTests = new List<Test>();
+            outForChecking = new List<Test>();
 
         }
 
