@@ -132,13 +132,6 @@ namespace ExamStack
 
                 }
 
-<<<<<<< HEAD
-            if (found == true)
-            {
-                outForChecking.RemoveAt(pos);
-                MessageBox.Show("Exam has been returned");
-
-=======
                 if (found == true)
                 {
                     outForChecking.RemoveAt(pos);
@@ -148,7 +141,7 @@ namespace ExamStack
                     }
                     MessageBox.Show("Thank you " + fullName, "Exam has been returned", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
->>>>>>> a1545261903445e9dac8040f558472540182e497
+
             }
         }
     }
