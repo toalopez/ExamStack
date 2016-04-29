@@ -41,8 +41,10 @@
             this.btnFinish = new Telerik.WinControls.UI.RadButton();
             this.breezeTheme1 = new Telerik.WinControls.Themes.BreezeTheme();
             this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
-            this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
+            this.lstReturnExams = new Telerik.WinControls.UI.RadListControl();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
@@ -53,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstReturnExams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +101,7 @@
             this.lstExams.DisplayMember = "Name";
             this.lstExams.Location = new System.Drawing.Point(25, 36);
             this.lstExams.Name = "lstExams";
-            this.lstExams.Size = new System.Drawing.Size(439, 337);
+            this.lstExams.Size = new System.Drawing.Size(199, 337);
             this.lstExams.TabIndex = 5;
             this.lstExams.Text = "radListControl1";
             this.lstExams.ThemeName = "Aqua";
@@ -151,6 +155,23 @@
             this.btnFinish.ThemeName = "Breeze";
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
+            // lstReturnExams
+            // 
+            this.lstReturnExams.Location = new System.Drawing.Point(249, 36);
+            this.lstReturnExams.Name = "lstReturnExams";
+            this.lstReturnExams.Size = new System.Drawing.Size(199, 337);
+            this.lstReturnExams.TabIndex = 11;
+            this.lstReturnExams.Text = "radListControl1";
+            this.lstReturnExams.ThemeName = "Aqua";
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Location = new System.Drawing.Point(249, 12);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(95, 18);
+            this.radLabel1.TabIndex = 12;
+            this.radLabel1.Text = "Exam Checkout  : ";
+            // 
             // testBindingSource
             // 
             this.testBindingSource.DataSource = typeof(ExamStack.Test);
@@ -160,6 +181,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 518);
+            this.Controls.Add(this.radLabel1);
+            this.Controls.Add(this.lstReturnExams);
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnView);
@@ -183,6 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstReturnExams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,6 +229,8 @@
         private System.Windows.Forms.BindingSource testBindingSource;
         private Telerik.WinControls.Themes.BreezeTheme breezeTheme1;
         private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
+        private Telerik.WinControls.UI.RadListControl lstReturnExams;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.RadThemeManager radThemeManager1;
     }
 }
