@@ -8,6 +8,7 @@ namespace ExamStack
 {
     public partial class MainExams : Form
     {
+        // This Telerik version is using 2014 Q3
         List<Test> submittedTests = null;
         List<Test> outForChecking = null;
 
