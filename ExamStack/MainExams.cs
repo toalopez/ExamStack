@@ -29,9 +29,24 @@ namespace ExamStack
         {
             Test t = new Test();
             RadListDataItem d = new RadListDataItem();
-            t.Name = txtName.Text;
-            t.Numero = Convert.ToInt16(txtExamNum.Text);
 
+            if (txtName.Text.Length != 0 && txtExamNum.Text.Length != 0)
+            {
+                t.Name = txtName.Text;
+                t.Numero = int.Parse(txtExamNum.Text.Trim());
+
+            }
+            else if (txtName.Text.Length == 0)
+            {
+                MessageBox.Show("Please Emter a valid name in Name field", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (txtExamNum.Text.Length == 0)
+            {
+                MessageBox.Show("Please Emter a valid number, in the Number field", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             submittedTests.Add(t);
 
             d.Text = t.Name;

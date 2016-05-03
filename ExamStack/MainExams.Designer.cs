@@ -34,6 +34,7 @@
             this.txtName = new Telerik.WinControls.UI.RadTextBoxControl();
             this.txtExamNum = new Telerik.WinControls.UI.RadTextBoxControl();
             this.lstExams = new Telerik.WinControls.UI.RadListControl();
+            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblExamList = new Telerik.WinControls.UI.RadLabel();
             this.btnTurnIn = new Telerik.WinControls.UI.RadButton();
             this.btnView = new Telerik.WinControls.UI.RadButton();
@@ -43,13 +44,13 @@
             this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
             this.lstReturnExams = new Telerik.WinControls.UI.RadListControl();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             ((System.ComponentModel.ISupportInitialize)(this.lblName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstExams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
@@ -57,12 +58,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstReturnExams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
             // 
-            this.lblName.Location = new System.Drawing.Point(21, 403);
+            this.lblName.Location = new System.Drawing.Point(37, 379);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(52, 17);
             this.lblName.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             // lblExamNum
             // 
-            this.lblExamNum.Location = new System.Drawing.Point(304, 403);
+            this.lblExamNum.Location = new System.Drawing.Point(290, 379);
             this.lblExamNum.Name = "lblExamNum";
             this.lblExamNum.Size = new System.Drawing.Size(100, 17);
             this.lblExamNum.TabIndex = 1;
@@ -80,7 +80,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(73, 400);
+            this.txtName.Location = new System.Drawing.Point(37, 403);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(209, 27);
             this.txtName.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             // txtExamNum
             // 
-            this.txtExamNum.Location = new System.Drawing.Point(410, 400);
+            this.txtExamNum.Location = new System.Drawing.Point(290, 402);
             this.txtExamNum.Name = "txtExamNum";
             this.txtExamNum.Size = new System.Drawing.Size(54, 27);
             this.txtExamNum.TabIndex = 4;
@@ -106,6 +106,10 @@
             this.lstExams.Text = "radListControl1";
             this.lstExams.ThemeName = "Aqua";
             this.lstExams.ValueMember = "Numero";
+            // 
+            // testBindingSource
+            // 
+            this.testBindingSource.DataSource = typeof(ExamStack.Test);
             // 
             // lblExamList
             // 
@@ -172,10 +176,6 @@
             this.radLabel1.TabIndex = 12;
             this.radLabel1.Text = "Exam Checkout  : ";
             // 
-            // testBindingSource
-            // 
-            this.testBindingSource.DataSource = typeof(ExamStack.Test);
-            // 
             // MainExams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtExamNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstExams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblExamList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
@@ -208,7 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFinish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstReturnExams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
